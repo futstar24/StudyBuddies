@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Home</title>
+</head>
+
+<body>
+    <p id = "emailText">hello</p>
+    <textarea id = "email"></textarea>
+    <textarea id = "password"></textarea>
+    <button onclick=signUp()></button>
+
+
+    <script>
+
+        getUserEmail();
+
+        async function getUserEmail() {
+            const response = await fetch("/getUserEmail");
+            const data = await response.json();
+            if (data.email) {
+                console.log(data.email)
+                emailText.innerHTML = data.email;
+            } else {
+                alert(data.info)
+            }
+        }
+
+        async function signUp() {
+            const response = await fetch("/signUp/"+email.value+"/"+password.value);
+            const data = await response.json();
+            if (data.result == "fail") {
+                alert(data.info);
+            } else if (data.result == "login") {
+                const response = await fetch("/logIn/"+email.value+"/"+password.value);
+                const data = await response.json();
+                if (data.result) {
+                    alert(data.info)
+                } else {
+                    console.log("log in success")
+                    getUserEmail()
+                }
+            } else {
+                alert(data.info)
+                getUserEmail()
+            }
+        }
+    </script>
+</body>
