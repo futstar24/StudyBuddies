@@ -31,7 +31,7 @@ app.config.update(
     SESSION_COOKIE_SECURE=True
 )
 
-CORS(app, supports_credentials=True, origins=["https://e14062411cbd.ngrok-free.app"]) #add real domain here
+CORS(app, supports_credentials=True, origins=["https://f904b8bbdf4a.ngrok-free.app"]) #add real domain here
 
 @app.route("/")
 @app.route("/home")
