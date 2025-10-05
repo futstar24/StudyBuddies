@@ -3,7 +3,7 @@ import { View, StyleSheet, Platform } from 'react-native';
 import { WebView as RNWebView } from 'react-native-webview';
 
 
-const DEV_URL = "https://f904b8bbdf4a.ngrok-free.app"; 
+const DEV_URL = "https://85df9f4b0999.ngrok-free.app"; 
 const PROD_URL = "";  
 
 export default function Index() {

@@ -16,11 +16,11 @@
         getUserEmail();
 
         async function getUserEmail() {
-            const response = await fetch("/getUserEmail");
+            const response = await fetch("/getUserInformation");
             const data = await response.json();
-            if (data.email) {
-                console.log(data.email)
-                emailText.innerHTML = data.email;
+            if (data.result == "success") {
+                console.log(data.info["email"])
+                emailText.innerHTML = data.info["email"];
             } else {
                 alert(data.info)
             }
