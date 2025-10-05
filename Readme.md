@@ -27,5 +27,6 @@ Welcome to the project! I'm so excited to start working on this with everyone. H
 I believe this is everything for you guys to learn how to do this. Again, don't worry about trying to run the npm and react stuff yet. Keep everything on the webpage (don't touch the StudyBuddiesApp folder).
 
 For now please do not edit any files. Just read through everything and let me know any questions you have!
+If you do edit anything, just don't commit it to github!
 
 Assignments for what everyone will be working on coming soon!
